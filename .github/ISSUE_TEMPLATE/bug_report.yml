@@ -1,0 +1,11 @@
+name: Bug report
+description: Report a problem with the togo queue-dashboard plugin
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Description + steps to reproduce. }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: queue-dashboard / togo version }
