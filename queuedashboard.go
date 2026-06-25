@@ -69,7 +69,7 @@ type Service struct {
 }
 
 func init() {
-	togo.RegisterProviderFunc("queue-dashboard", togo.PriorityService, func(k *togo.Kernel) error {
+	togo.RegisterProviderFunc("queue-dashboard", togo.PriorityLate+10, func(k *togo.Kernel) error {
 		s := &Service{k: k, jobs: map[string]*Job{}, maxJobs: 2000}
 		k.Set("queue-dashboard", s)
 		if k.Router != nil {
